@@ -129,9 +129,7 @@ class VoiceCog(commands.Cog):
             await ctx.reply('Not Connected', mention_author=False)
             return
         
-        print('Preparing to play...')
         self.source = MPVSource(path)
-        print('Playing...')
         ctx.guild.voice_client.play(self.source)
     
     @vc.command(name='cmd')
