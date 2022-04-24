@@ -121,7 +121,7 @@ class VoiceCog(commands.Cog):
             await ctx.reply('Not Connected', mention_author=False)
             return
         
-        await ctx.send(view=PlayerUIView(ctx, self.source))
+        await ctx.send(view=PlayerUIView(ctx, ctx.guild.voice_client.source))
     
     @vc.command(name='play')
     async def vc_testplay(self, ctx: commands.Context, path: str):
@@ -129,8 +129,8 @@ class VoiceCog(commands.Cog):
             await ctx.reply('Not Connected', mention_author=False)
             return
         
-        self.source = MPVSource(path)
-        ctx.guild.voice_client.play(self.source)
+        source = MPVSource(source=path, opus_bitrate=284)
+        ctx.guild.voice_client.play(source)
     
     @vc.command(name='cmd')
     async def vc_mpvcmd(self, ctx: commands.Context, cmd: str):
