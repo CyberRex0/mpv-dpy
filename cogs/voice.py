@@ -11,7 +11,7 @@ class PlayerUIView(discord.ui.View):
         self.source: MPVSource = source
         self.loop: bool = False
         self.bassboost: bool = False
-        self.eq_param: str = 'equalizer=f=60:t=h:w=50:g=14'
+        self.eq_param: str = 'equalizer=f=60:t=h:w=50:g=10'
     
     @discord.ui.button(label='<<')
     async def skip_back_2x(self, interaction: discord.Interaction, button: discord.ui.Button):
