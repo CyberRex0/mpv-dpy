@@ -1,0 +1,7 @@
+__pycache__
+*.m4a
+*.ogg
+*.wav
+*.flac
+*.mp3
+config.py
