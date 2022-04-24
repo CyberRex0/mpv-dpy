@@ -21,7 +21,7 @@ TOKEN='YourTokenHere'
 |`t!vc dc`|ボットをVCから抜けさせる|
 |`t!vc play ファイルパス(URL可)`|音楽ファイル/URLを再生する|
 |`t!vc stop`|再生停止|
-|`t!vc cmd COMMAND`|MPVに`COMMAND`というコマンドを送信する|
+|`t!vc cmd COMMAND`|MPVに`COMMAND`というコマンドを送信する<br>**本番環境でこのコマンドを実装しないでください**|
 |`t!vc seek RELATIVE_SEC`|`RELATIVE_SEC`秒だけシークする(負の値で巻き戻し)|
 |`t!vc ui`|再生コントロール表示|
 
