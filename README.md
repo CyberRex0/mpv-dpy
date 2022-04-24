@@ -52,5 +52,5 @@ async def seek(ctx: commands.Context, sec: int):
 ```
 
 # Copyright
-MIT License
+MIT License<br>
 &copy;2022 CyberRex
